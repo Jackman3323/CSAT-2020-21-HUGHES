@@ -14,6 +14,7 @@ public class Node<T>{
     //Child node
     private Node child;
 
+    //CONSTRUCTORS
     //Constructor--default (set to null)
     public Node(){
         this.t = null;
@@ -27,5 +28,19 @@ public class Node<T>{
         this.t = t;
         this.parent = p;
         this.child = c;
+    }
+
+    //ACCESSORS
+    //Accessor--Stored data
+    public T get(){
+        return this.t;
+    }
+    //Accessor--Parent node
+    public Node getParent(){
+        return this.parent;
+    }
+    //Accessor--Child node
+    public Node getChild(){
+        return this.child;
     }
 }
