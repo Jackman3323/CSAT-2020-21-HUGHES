@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaMultiArcade/JavaMultiArcade.iml" filepath="$PROJECT_DIR$/JavaMultiArcade/JavaMultiArcade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab 9.03/Lab 9.03.iml" filepath="$PROJECT_DIR$/Lab 9.03/Lab 9.03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab9.03/Lab 9.03.iml" filepath="$PROJECT_DIR$/Lab9.03/Lab 9.03.iml" />
       <module fileurl="file://$PROJECT_DIR$/Node/Node.iml" filepath="$PROJECT_DIR$/Node/Node.iml" />
       <module fileurl="file://$PROJECT_DIR$/Robotics/Robotics.iml" filepath="$PROJECT_DIR$/Robotics/Robotics.iml" />
       <module fileurl="file://$PROJECT_DIR$/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/TicTacToe/TicTacToe.iml" />
