@@ -10,18 +10,22 @@ public class Node<T>{
     //Generic datatype
     private T t;
     //Parent node
-    private Node parent;
+    protected Node parent;
     //Child node
-    private Node child;
+    protected Node child;
 
     //CONSTRUCTORS
     //Constructor--default (set to null)
     public Node(){
         this.t = null;
+        this.parent = null;
+        this.child = null;
     }
     //Constructor--just data
     public Node(T t){
         this.t = t;
+        this.parent = null;
+        this.child = null;
     }
     //Constructor--data and parent/child nodes
     public Node(T t, Node p, Node c){
@@ -50,18 +54,33 @@ public class Node<T>{
         this.t = t;
     }
     //Mutator--Parent node
-    public void seParent(Node p){
+    public void setParent(Node p){
         this.parent = p;
+        updateChild(p);
     }
     //Mutator--Child node
     public void setChild(Node c){
         this.child  = c;
+        updateParent(c);
+    }
+    //Mutator--private version to update the parent of the child node when you use setChild
+    // prevents infinite loop --> stack overflow
+    private void updateParent(Node c){
+        c.parent = this;
+    }
+    //Mutator--private version to update the child of the parent node when you use setParent
+    // prevents infinite loop --> stack overflow
+    private void updateChild(Node p){
+        p.child = this;
     }
 
     //OVERRIDES OF DEFAULT METHODS
     //.toString()--returns datatype's toString
     @Override
     public String toString(){
+        if(this.t == null){
+            return null;
+        }
         return this.t.toString();
     }
     //.equals()--returns if this datatype equals other node's datatype
